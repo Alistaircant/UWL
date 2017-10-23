@@ -1,0 +1,85 @@
+## question 2) statement written to test if user entered "y". 
+
+userInput = input("Enter Y to quit.")
+if  userInput == "y":
+    print("Goodbye")
+
+
+###############################################################
+## question 3) correct errors in the following statements:
+
+#a)
+x = 1 #correction
+if x > 0 then :
+    	print(x)
+      
+#Answer: the word ‘then’ is not a function. The programmer also hasn’t defined x.
+
+#b)
+from math import sqrt #correction
+x = 1 #correction
+if 1 + x > x ** sqrt(2) :
+     	y = y + x
+
+#Answer : the programmer hasn’t imported the sqrt function from math.  The programmer also hasn’t defined y or x
+
+#c) 
+if x = 1 :
+  y += 1
+#Answer: the programmer hasn’t defined x or y. They are also missing another equals sign at the IF function. It should be a double equals function
+
+#d) 
+
+grade = int(input("type the grade percentage: ")) #correction
+letterGrade = "F"
+    if grade >= 90 :
+	letterGrade = "A"
+    if grade >= 80 :
+	letterGrade = "B"
+    if grade >= 70 :
+	letterGrade = "C"
+    if grade >= 60 :
+	letterGrade = "D"
+
+#Answer: grade is not defined. The programmer needs to write a line that assigns a value to ‘grade’.
+
+###############################################################
+
+# 4) create a program that breaks down a flow chart to display the impact that an Earthquake would have depending on the users chosen magnitude value.
+
+richter = float(input("Enter a magnitude from the richter scale: "))
+
+if richter >= 8.0:
+    print('Most buildings will have been destroyed.')
+elif richter >= 7.0:
+    print('Many buildings will have been destroyed.')
+elif richter >= 6.0:
+    print('Many buildings will be heavily damaged. Some will fall.')
+elif richter >= 4.5:
+    print('Damage to poorly constructed buildings.')
+
+else:
+    print('no destruction of buildings')
+    
+##question 5) creating a password with limited attempts
+
+#Variables:
+remainingAttempts = 4
+attemptNum = 0
+correctPassword = 1
+guess = input('Enter the password: ')
+
+#incorrect password result, attempt number counter and remaining attempts count down:
+while guess != 'changeme':
+    print('wrong password. You have',remainingAttempts,'more attempts.')
+    guess = input('Try again: ')
+    remainingAttempts = remainingAttempts - 1
+    attemptNum = attemptNum + 1
+
+    #extra challenge
+    if remainingAttempts == 0:
+        input('Entry denied. Please press enter to exit and contact security to reset password.')
+        exit()
+#correct password result
+if guess == 'changeme':
+    print('Accepted! That only took you',attemptNum,'attempts!')
