@@ -83,3 +83,28 @@ while guess != 'changeme':
 #correct password result
 if guess == 'changeme':
     print('Accepted! That only took you',attemptNum,'attempts!')
+    
+
+
+##Question 7) write a program which generates a table which displays the powers of the first five numbers.
+
+#Here the code asks for the users input to choose the numbers which are to be squared or cubed.
+print('Choose 5 numbers you would like to square and cube')
+number1 = int(input('First number: '))
+number2 = int(input('Second number: '))
+number3 = int(input('Third number: '))
+number4 = int(input('Fourth number: '))
+number5 = int(input('Fifth number: '))
+
+#Here the code displays the results in a table.
+
+print(' 1   2   3   ')
+print(' x   x   x   ')
+print('-------------')
+print('',number1**1,' ',number1**2,' ',number1**3,' ')
+print('',number2**1,' ',number2**2,' ',number2**3,' ')
+print('',number3**1,' ',number3**2,' ',number3**3,' ')
+print('',number4**1,' ',number4**2,' ',number4**3,' ')
+print('',number5**1,' ',number5**2,' ',number5**3,' ')
+
+
