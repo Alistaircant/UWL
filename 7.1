@@ -38,3 +38,50 @@ while len(newitem) >= 1:
     newitem = input("Enter an item to add to your shopping list or hit enter to finish ")
 print("Your shopping list looks like this: ",shoplist)
 
+## Question 5 
+
+sentence1 = input("type a sentence: ")
+sentence2 = input("type another sentence: ")
+#gets input from user
+sentencelist1 = sentence1.split()
+sentencelist2 = sentence2.split()
+#splits sentances into seperate wods
+
+wordlist = sentencelist1 + sentencelist2
+#concatinates sentances
+wordlist.sort(key=str.lower)
+#sorts into alphabetical order
+#key=str.lower eliminates issue of the sorting being case sensitive, keeping it strictly alphabetical
+
+print(wordlist)
+print(len(wordlist))
+
+
+def countingList(item,wordlist):
+    count = 0
+    for i in range(len(wordlist)):
+        
+        if item == wordlist[i]:
+            count = count +1
+
+    return count
+#counts occurance of each word
+
+
+
+list2 = []
+dict1 = {}
+
+
+for i in range(len(wordlist)):
+    if wordlist[i] not in list2:
+        list2.append(wordlist[i])
+        
+for i in range(len(list2)):
+    
+    occur = countingList(list2[i],wordlist)
+
+    dict1[list2[i]]=occur
+#attaches occurance count of each word to the word  
+print(dict1)
+
