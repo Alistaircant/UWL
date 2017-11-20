@@ -1,0 +1,59 @@
+## question 4:
+
+
+def evenPage(p): #returns appropriate boolean depending on whether page is odd or even
+    if p % 2 == 0:
+        return True
+    else:
+        return False
+
+p = int(input('Please input a page number: ')) 
+
+if evenPage(p) == True: #uses evenPage function to choose which side to print page number.
+    print(p)
+else:
+    print("%60s%d" % (" ", p)) 
+
+##question 5:
+
+    def count_spaces(userinput):
+    spaces = 0
+    for char in userinput:
+        if char == " ":
+            spaces = spaces + 1
+    return spaces
+
+def main():
+    
+    userInput=input('enter sentence: ')
+    s = count_spaces(userInput) #assign s (spaces) by calling count_spaces function
+    print(s)
+
+
+main()
+
+
+## Question 6:
+
+def mystery(n):
+    if n <= 0 :
+        return 0
+    else:
+        return n + mystery(n - 1)
+#prints answer
+def main(): 
+    n = mystery(4)
+    print(n)
+main()
+
+## Question 7:
+def mystery(n) :
+    if n <= 0 :
+        return 0
+    else:
+        return mystery(n // 2) + 1
+def main():
+    n = mystery(20)
+    print(n)
+main()
+
