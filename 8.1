@@ -1,23 +1,64 @@
-## question 4:
+###Question 1
+def mystery(x, y):
+    result = (x + y) / (y - x)
+    return result
+
+print(mystery(2,3))
 
 
-def evenPage(p): #returns appropriate boolean depending on whether page is odd or even
+
+##Question 2
+
+def main():
+    a = 5
+    b = 7
+    print(mystery(a, b))
+
+def mystery(x, y):
+    z = x + y
+    z = z / 2.0
+    return z
+main()
+
+
+
+## Question 3
+
+def main():
+    a = 4
+    print(mystery(a + 1))
+
+def mystery(x):
+    y = x * x
+    return y
+main()
+
+
+
+##Question 4
+
+def evenPage(p):
     if p % 2 == 0:
         return True
     else:
         return False
 
-p = int(input('Please input a page number: ')) 
+p = int(input('Please input a page number: '))
 
-if evenPage(p) == True: #uses evenPage function to choose which side to print page number.
+if evenPage(p) == True:
     print(p)
 else:
-    print("%60s%d" % (" ", p)) 
+    print("%60s%d" % (" ", p))
 
-##question 5:
 
-    def count_spaces(userinput):
+
+##Question 5
+
+
+
+def count_spaces(userinput):
     spaces = 0
+
     for char in userinput:
         if char == " ":
             spaces = spaces + 1
@@ -26,34 +67,86 @@ else:
 def main():
     
     userInput=input('enter sentence: ')
-    s = count_spaces(userInput) #assign s (spaces) by calling count_spaces function
+    s = count_spaces(userInput)
     print(s)
 
 
 main()
 
 
-## Question 6:
+###Question 6
 
 def mystery(n):
     if n <= 0 :
         return 0
+
     else:
         return n + mystery(n - 1)
-#prints answer
-def main(): 
-    n = mystery(4)
-    print(n)
+
+def main():
+    print(mystery(4))
 main()
 
-## Question 7:
+
+
+##question 7
+
 def mystery(n) :
     if n <= 0 :
         return 0
+
     else:
         return mystery(n // 2) + 1
 def main():
-    n = mystery(20)
-    print(n)
+    print(mystery(20))
 main()
+
+
+
+##Question 9
+
+def f(a) :
+    if a < 0 :
+        return -1
+
+    n = a
+
+    while n > 0:
+        if n % 2 == 0: # n is even
+
+            n = n // 2
+
+        elif n == 1:
+            return 1
+
+        else:
+            n = 3 * n + 1
+
+        return 0
+
+
+
+
+def main():
+    t = f(-1)
+    print(t)
+
+    t = f(0)
+    print(t)
+
+    t = f(1)
+    print(t)
+
+    t = f(2)
+    print(t)
+
+    t = f(10)
+    print(t)
+
+    t = f(100)
+    print(t)
+
+main()
+
+
 
